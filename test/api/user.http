@@ -1,0 +1,33 @@
+GET http://localhost:4000/user/getAll
+
+###
+
+POST http://localhost:4000/user/createOne
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "elsa2@prisma.io",
+  "name": "Elsa Prisma"
+}
+
+
+###
+
+POST http://localhost:4000/user/createMany
+Content-Type: application/json
+Accept: application/json
+
+[
+  { "name": "Bob", "email": "bob@prisma.io" },
+  { "name": "Bobo", "email": "bob@prisma.io" }, 
+  { "name": "Yewande", "email": "yewande@prisma.io" },
+  { "name": "Angelique", "email": "angelique@prisma.io" }
+]
+
+### 
+
+GET http://localhost:4000/user/findUnique?id=1
+
+###
+GET http://localhost:4000/timePeriod/findUniqueByTimePeriod
